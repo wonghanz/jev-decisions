@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      # No dependencies to install by design; eval and demo must run offline.
+      - name: tests
+        run: npm test
+      - name: eval must run without any API key
+        run: npm run eval
+      - name: demo
+        run: npm run demo
+      - name: live mode must fail loudly without a key
+        run: |
+          unset OPENROUTER_API_KEY JEV_API_KEY
+          if node src/cli.js live; then
+            echo "live mode silently succeeded without a key" >&2
+            exit 1
+          fi

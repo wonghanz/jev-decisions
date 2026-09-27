@@ -1,0 +1,39 @@
+{
+  "name": "jev-decisions",
+  "version": "0.1.0",
+  "description": "Typed decision layer for backend engineering: log triage, incident routing, PR triage, deploy risk. Runs on a hosted decision model or a local baseline, and scores both against your own history.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "jev-decisions": "src/cli.js"
+  },
+  "files": [
+    "src",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/core.test.js test/pipeline.test.js",
+    "eval": "node src/cli.js eval",
+    "demo": "node src/cli.js demo",
+    "live": "node src/cli.js live"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "decision-model",
+    "classification",
+    "sre",
+    "incident-response",
+    "code-review",
+    "openrouter"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

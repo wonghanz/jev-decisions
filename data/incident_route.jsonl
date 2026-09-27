@@ -1,0 +1,12 @@
+{"id":"INC-01","state":{"message":"My payout has failed three times and I cannot get my money out","days_waiting":3,"channel":"email"},"expected":{"team":"payments","urgency":"high","needs_human":true}}
+{"id":"INC-02","state":{"message":"Login is broken for everyone, users cannot log in, full outage of SSO","affected_users":5000,"channel":"phone"},"expected":{"team":"identity","urgency":"urgent","needs_human":true}}
+{"id":"INC-03","state":{"message":"Our nightly build keeps failing on the deploy pipeline, Kubernetes pods not scheduling","channel":"slack"},"expected":{"team":"platform","urgency":"normal","needs_human":false}}
+{"id":"INC-04","state":{"message":"How do I add a second admin to our account? Just asking about the pricing page options","channel":"chat"},"expected":{"team":"identity","urgency":"low","needs_human":false}}
+{"id":"INC-05","state":{"message":"Dashboard shows a blank white screen on mobile Safari after the release","channel":"webform"},"expected":{"team":"frontend","urgency":"normal","needs_human":false}}
+{"id":"INC-06","state":{"message":"Our analytics tables are stale, the ETL pipeline stopped loading last night, data quality issue","channel":"slack"},"expected":{"team":"data","urgency":"normal","needs_human":false}}
+{"id":"INC-07","state":{"message":"I was charged twice for the same invoice and want a refund, this is going to be a legal problem","days_waiting":1,"channel":"email"},"expected":{"team":"payments","urgency":"high","needs_human":true}}
+{"id":"INC-08","state":{"message":"Redis cache eviction rate is high on shared cluster, several services degraded and timing out","channel":"monitoring"},"expected":{"team":"platform","urgency":"high","needs_human":true}}
+{"id":"INC-09","state":{"message":"API keys do not seem to work after rotation, token exchange returns 401 for our integration","channel":"email"},"expected":{"team":"identity","urgency":"normal","needs_human":false}}
+{"id":"INC-10","state":{"message":"Can you explain what counts as a billable seat? Question about docs, no urgency","channel":"chat"},"expected":{"team":"payments","urgency":"none","needs_human":false}}
+{"id":"INC-11","state":{"message":"Export report is missing rows, the numbers do not match our warehouse, data seems corrupt","channel":"email"},"expected":{"team":"data","urgency":"high","needs_human":true}}
+{"id":"INC-12","state":{"message":"Checkout button does nothing on Firefox, customers cannot pay","affected_users":900,"channel":"phone"},"expected":{"team":"frontend","urgency":"urgent","needs_human":true}}
